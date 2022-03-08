@@ -14,7 +14,7 @@ public class Member {
 		this.grade = grade;
 	}
 
-//	test
+//	test 2
 	public Long getId() {
 		return id;
 	}
