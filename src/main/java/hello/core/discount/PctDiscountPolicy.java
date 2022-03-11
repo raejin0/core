@@ -1,16 +1,16 @@
-package hello.core.member.discount;
+package hello.core.discount;
 
 import hello.core.member.Grade;
 import hello.core.member.Member;
 
-public class RateDiscountPolicy implements DiscountPolicy {
-
-	private int defaultAmount = 1000;
+ // Percentage
+public class PctDiscountPolicy implements DiscountPolicy {
+	private int discountRate = 10;
 
 	@Override
 	public int discount(Member member, int price) {
 		if ( member.getGrade() == Grade.VIP) {
-			return defaultAmount;
+			return price / 100 * discountRate;
 		} else {
 			return 0;
 		}
