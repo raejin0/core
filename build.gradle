@@ -22,18 +22,17 @@ repositories {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'org.springframework.boot:spring-boot-starter-web'  // web library 추가 ( Tomcat, web MVC 등 )
+
+    implementation 'javax.inject:javax.inject:1'
 
     // add lombok library - begin
-//    implementation 'org.springframework.b'
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
 
     testCompileOnly 'org.projectlombok:lombok'
     testAnnotationProcessor 'org.projectlombok:lombok'
-
-
     // add lombok library - end
-
 
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
